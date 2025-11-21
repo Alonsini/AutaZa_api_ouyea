@@ -10,7 +10,7 @@ import AutaZa.AutaZa.model.Transmision;
 @Repository
 public interface TransmisionRepository extends JpaRepository<Transmision, Integer>{
 
-    List<Transmision> findByIdTransmision(String idTransmision);
+    List<Transmision> findByIdTransmision(Integer idTransmision);
 
     List<Transmision> findByTipoTransmision(String tipoTransmision);
 }

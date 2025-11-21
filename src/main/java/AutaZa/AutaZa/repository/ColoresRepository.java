@@ -10,5 +10,5 @@ import AutaZa.AutaZa.model.Colores;
 @Repository
 public interface ColoresRepository extends JpaRepository<Colores, Integer>{
 
-    List<Colores> findByIdColores(String idColores);
+    List<Colores> findByIdColores(Integer idColores);
 }

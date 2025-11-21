@@ -10,7 +10,7 @@ import AutaZa.AutaZa.model.Estado;
 @Repository
 public interface EstadoRepository extends JpaRepository<Estado, Integer>{
 
-    List<Estado> findByIdEstado(String idEstado);
+    List<Estado> findByIdEstado(Integer idEstado);
 
     List<Estado> findByNombreEstado(String nombreEstado);
 }

@@ -10,6 +10,6 @@ import AutaZa.AutaZa.model.Categorias;
 @Repository
 public interface CategoriasRepository extends JpaRepository<Categorias, Integer>{
 
-    List<Categorias> findByIdCategorias(String idCategorias);
+    List<Categorias> findByIdCategorias(Integer idCategorias);
 
 }

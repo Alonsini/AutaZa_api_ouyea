@@ -10,5 +10,5 @@ import AutaZa.AutaZa.model.Imagen;
 @Repository
 public interface ImagenRepository extends JpaRepository<Imagen, Integer>{
 
-    List<Imagen> findByIdImagen(String idImagen);
+    List<Imagen> findByIdImagen(Integer idImagen);
 }

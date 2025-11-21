@@ -10,7 +10,7 @@ import AutaZa.AutaZa.model.Color;
 @Repository
 public interface ColorRepository extends JpaRepository<Color, Integer>{
 
-    List<Color> findByIdColor(String idColor);
+    List<Color> findByIdColor(Integer idColor);
 
     List<Color> findByNombreColor(String nombreColor);
 }

@@ -10,7 +10,7 @@ import AutaZa.AutaZa.model.MetodoEntrega;
 @Repository
 public interface MetodoEntregaRepository extends JpaRepository<MetodoEntrega, Integer>{
 
-    List<MetodoEntrega> findByIdMetodoEntrega(String idMetodoEntrega);
+    List<MetodoEntrega> findByIdMetodoEntrega(Integer idMetodoEntrega);
 
     List<MetodoEntrega> findByNombreMetodoEntrega(String nombreMetodoEntrega);
 }

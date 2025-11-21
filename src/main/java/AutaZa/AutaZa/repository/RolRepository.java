@@ -10,7 +10,7 @@ import AutaZa.AutaZa.model.Rol;
 @Repository
 public interface RolRepository extends JpaRepository<Rol, Integer>{
 
-    List<Rol> findByIdRol(String idRol);
+    List<Rol> findByIdRol(Integer idRol);
 
     List<Rol> findByNombreRol(String nombreRol);
 }

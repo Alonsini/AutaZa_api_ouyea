@@ -10,7 +10,7 @@ import AutaZa.AutaZa.model.Procedencia;
 @Repository
 public interface ProcedenciaRepository extends JpaRepository<Procedencia, Integer>{
 
-    List<Procedencia> findByIdProcedencia(String idProcedencia);
+    List<Procedencia> findByIdProcedencia(Integer idProcedencia);
 
     List<Procedencia> findByPais(String pais);
 }

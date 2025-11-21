@@ -10,5 +10,5 @@ import AutaZa.AutaZa.model.Venta;
 @Repository
 public interface VentaRepository extends JpaRepository<Venta, Integer>{
 
-    List<Venta> findByIdVenta(String idVenta);
+    List<Venta> findByIdVenta(Integer idVenta);
 }

@@ -10,7 +10,7 @@ import AutaZa.AutaZa.model.Marca;
 @Repository
 public interface MarcaRepository extends JpaRepository<Marca, Integer>{
 
-    List<Marca> findByIdMarca(String idMarca);
+    List<Marca> findByIdMarca(Integer idMarca);
 
     List<Marca> findByNombreMarca(String nombreMarca);
 }

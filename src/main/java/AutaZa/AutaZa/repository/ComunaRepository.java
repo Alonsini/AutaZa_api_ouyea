@@ -10,9 +10,9 @@ import AutaZa.AutaZa.model.Comuna;
 @Repository
 public interface ComunaRepository extends JpaRepository<Comuna, Integer>{
 
-    List<Comuna> findByIdComuna(String idComuna);
+    List<Comuna> findByIdComuna(Integer idComuna);
 
-    List<Comuna> findByIdRegion(String idRegion);
+    List<Comuna> findByIdRegion(Integer idRegion);
 
     List<Comuna> findByNombreComuna(String nombreComuna);
 }

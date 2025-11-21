@@ -10,5 +10,5 @@ import AutaZa.AutaZa.model.Region;
 @Repository
 public interface RegionRepository extends JpaRepository<Region, Integer>{
 
-    List<Region> findByIdRegion(String idRegion);
+    List<Region> findByIdRegion(Integer idRegion);
 }

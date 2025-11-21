@@ -10,7 +10,7 @@ import AutaZa.AutaZa.model.Producto;
 @Repository
 public interface ProductoRepository extends JpaRepository<Producto, Integer>{
 
-    List<Producto> findByIdProducto(String idProducto);
+    List<Producto> findByIdProducto(Integer idProducto);
 
     List<Producto> findByNombreProducto(String nombreProducto);
 

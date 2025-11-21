@@ -10,7 +10,7 @@ import AutaZa.AutaZa.model.Combustible;
 @Repository
 public interface CombustibleRepository extends JpaRepository<Combustible, Integer>{
 
-    List<Combustible> findByIdCombustible(String idCombustible);
+    List<Combustible> findByIdCombustible(Integer idCombustible);
 
     List<Combustible> findByTipoCombustible(String tipoCombustible);
 }

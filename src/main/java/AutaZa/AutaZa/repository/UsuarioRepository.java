@@ -10,7 +10,7 @@ import AutaZa.AutaZa.model.Usuario;
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer>{
 
-    List<Usuario> findByIdUsuario(String idUsuario);
+    List<Usuario> findByIdUsuario(Integer idUsuario);
 
     List<Usuario> findByNombreUsuario(String nombreUsuario);
 
