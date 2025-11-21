@@ -26,5 +26,5 @@ public class Comuna {
 
     @ManyToOne
     @JoinColumn(name = "idRegion")
-    private Region region;
+    private Region idRegion;
 }

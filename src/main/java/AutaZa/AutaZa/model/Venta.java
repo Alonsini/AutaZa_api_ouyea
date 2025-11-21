@@ -22,21 +22,21 @@ public class Venta {
 
     @ManyToOne
     @JoinColumn(name = "idEstado")
-    private Estado estado;
+    private Estado idEstado;
 
     @ManyToOne
     @JoinColumn(name = "idMetodoPago")
-    private MetodoPago metodoPago;
+    private MetodoPago idMetodoPago;
 
     @ManyToOne
     @JoinColumn(name = "idMetodoEntrega")
-    private MetodoEntrega metodoEntrega;
+    private MetodoEntrega idMetodoEntrega;
 
     @ManyToOne
     @JoinColumn(name = "idUsuario")
-    private Usuario usuario;
+    private Usuario idUsuario;
 
     @ManyToOne
     @JoinColumn(name = "idProducto")
-    private Producto producto;
+    private Producto idProducto;
 }

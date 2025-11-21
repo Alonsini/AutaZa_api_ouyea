@@ -22,6 +22,6 @@ public class Categorias{
 
     @ManyToOne
     @JoinColumn(name = "idCategoria")
-    private Categoria categoria;
+    private Categoria idCategoria;
 }
 

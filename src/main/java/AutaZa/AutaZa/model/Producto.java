@@ -26,17 +26,17 @@ public class Producto {
 
     @ManyToOne
     @JoinColumn(name = "idCombustible")
-    private Combustible combustible;
+    private Combustible idCombustible;
 
     @ManyToOne
     @JoinColumn(name = "idImagen")
-    private Imagen imagen;
+    private Imagen idImagen;
 
     @ManyToOne
     @JoinColumn(name = "idColores")
-    private Colores colores;
+    private Colores idColores;
 
     @ManyToOne
     @JoinColumn(name = "idCategorias")
-    private Categorias categorias;
+    private Categorias idCategorias;
 }

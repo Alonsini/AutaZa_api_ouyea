@@ -30,7 +30,7 @@ public class Direcciones {
 
     @ManyToOne
     @JoinColumn(name = "idComuna")
-    private Comuna comuna;
+    private Comuna idComuna;
 
     
 }

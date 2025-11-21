@@ -22,5 +22,5 @@ public class Colores {
 
     @ManyToOne
     @JoinColumn(name = "idColor")
-    private Color color;
+    private Color idColor;
 }

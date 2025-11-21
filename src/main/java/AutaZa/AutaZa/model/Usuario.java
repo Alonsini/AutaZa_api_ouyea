@@ -36,9 +36,9 @@ public class Usuario {
 
     @ManyToOne
     @JoinColumn(name = "idRol")
-    private Rol rol;
+    private Rol idRol;
 
     @ManyToOne
     @JoinColumn(name = "idDirecciones")
-    private Direcciones direcciones;
+    private Direcciones idDirecciones;
 }
