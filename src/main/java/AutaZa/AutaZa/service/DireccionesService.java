@@ -39,8 +39,8 @@ public class DireccionesService {
             if(direcciones.getNumero() != null)
                 existing.setNumero(direcciones.getNumero());
 
-            if(direcciones.getComuna() != null) 
-                existing.setComuna(direcciones.getComuna());
+            if(direcciones.getIdComuna() != null) 
+                existing.setIdComuna(direcciones.getIdComuna());
 
             return direccionesRepository.save(existing);
         }

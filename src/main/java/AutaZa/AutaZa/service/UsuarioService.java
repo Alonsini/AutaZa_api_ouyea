@@ -79,12 +79,12 @@ public class UsuarioService {
             existing.setContrasena(passwordEncoder.encode(usuario.getContrasena()));
         }
 
-        if (usuario.getRol() != null) {
-            existing.setRol(usuario.getRol());
+        if (usuario.getIdRol() != null) {
+            existing.setIdRol(usuario.getIdRol());
         }
 
-        if (usuario.getDirecciones() != null) {
-            existing.setDirecciones(usuario.getDirecciones());
+        if (usuario.getIdDirecciones() != null) {
+            existing.setIdDirecciones(usuario.getIdDirecciones());
         }
 
         return usuarioRepository.save(existing);
