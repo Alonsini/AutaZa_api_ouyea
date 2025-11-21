@@ -1,5 +1,6 @@
 package AutaZa.AutaZa.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,6 +20,9 @@ public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idProducto;
+
+    @Column(name = "nombreProducto", length = 50, nullable = false)
+    private String nombreProducto;
 
     @ManyToOne
     @JoinColumn(name = "idMarca")
