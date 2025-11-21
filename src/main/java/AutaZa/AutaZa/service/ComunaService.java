@@ -36,8 +36,8 @@ public class ComunaService {
             if(comuna.getNombreComuna() != null)
                 existing.setNombreComuna(comuna.getNombreComuna());
 
-            if(comuna.getRegion() != null)
-                existing.setRegion(comuna.getRegion());
+            if(comuna.getIdRegion() != null)
+                existing.setIdRegion(comuna.getIdRegion());
 
             return comunaRepository.save(existing);
         }
