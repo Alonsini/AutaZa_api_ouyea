@@ -36,7 +36,7 @@ public class UsuarioService {
 
     public Usuario login(Usuario usuario) {
 
-        List<Usuario> list = usuarioRepository.findByCorreoUsuario(usuario.getCorreo());
+        List<Usuario> list = usuarioRepository.findByCorreoUsuario(usuario.getCorreoUsuario());
 
         if (list.isEmpty()) {
             return null;
@@ -71,8 +71,8 @@ public class UsuarioService {
             existing.setNombreUsuario(usuario.getNombreUsuario());
         }
 
-        if (usuario.getCorreo() != null) {
-            existing.setCorreo(usuario.getCorreo());
+        if (usuario.getCorreoUsuario() != null) {
+            existing.setCorreoUsuario(usuario.getCorreoUsuario());
         }
 
         if (usuario.getContrasena() != null) {
