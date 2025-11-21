@@ -31,8 +31,8 @@ public class CategoriaService {
         Categoria existing = categoriaRepository.findById(categoria.getIdCategoria()).orElse(null);
         if (existing != null) {
 
-            if(categoria.getNombre() != null)
-                existing.setNombre(categoria.getNombre());
+            if(categoria.getNombreCategoria() != null)
+                existing.setNombreCategoria(categoria.getNombreCategoria());
 
             if (categoria.getDescripcion()!=null) 
                 existing.setDescripcion(categoria.getDescripcion());
