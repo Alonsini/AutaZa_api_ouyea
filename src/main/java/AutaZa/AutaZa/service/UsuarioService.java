@@ -25,7 +25,7 @@ public class UsuarioService {
     }
 
     public Usuario findById(Integer idUsuario) {
-        List<Usuario> list = usuarioRepository.findByIdUsuario(idUsuario.toString());
+        List<Usuario> list = usuarioRepository.findByIdUsuario(idUsuario);
         if (!list.isEmpty()) {
             Usuario u = list.get(0);
             u.setContrasena(null); 
@@ -60,7 +60,7 @@ public class UsuarioService {
 
     public Usuario partialUpdate(Usuario usuario) {
 
-        List<Usuario> list = usuarioRepository.findByIdUsuario(usuario.getIdUsuario().toString());
+        List<Usuario> list = usuarioRepository.findByIdUsuario(usuario.getIdUsuario());
         if (list.isEmpty()) {
             return null;
         }
