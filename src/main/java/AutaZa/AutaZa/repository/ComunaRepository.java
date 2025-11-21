@@ -12,7 +12,7 @@ public interface ComunaRepository extends JpaRepository<Comuna, Integer>{
 
     List<Comuna> findByIdComuna(Integer idComuna);
 
-    List<Comuna> findByIdRegion(Integer idRegion);
+    List<Comuna> findByIdRegion_IdRegion(Integer idRegion);
 
     List<Comuna> findByNombreComuna(String nombreComuna);
 }
