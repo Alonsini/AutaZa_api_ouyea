@@ -20,7 +20,7 @@ import AutaZa.AutaZa.service.CategoriaService;
 
 
 @RestController
-@RequestMapping("/api/categoria")
+@RequestMapping("/autaza_api/v1/categoria")
 public class CategoriaController {
 
     @Autowired

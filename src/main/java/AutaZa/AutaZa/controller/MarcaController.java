@@ -18,7 +18,7 @@ import AutaZa.AutaZa.model.Marca;
 import AutaZa.AutaZa.service.MarcaService;
 
 @RestController
-@RequestMapping("/api/marca")
+@RequestMapping("/autaza_api/v1/marca")
 public class MarcaController {
 
     @Autowired

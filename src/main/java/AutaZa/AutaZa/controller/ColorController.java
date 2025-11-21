@@ -19,7 +19,7 @@ import AutaZa.AutaZa.model.Color;
 import AutaZa.AutaZa.service.ColorService;
 
 @RestController
-@RequestMapping("/api/color")
+@RequestMapping("/autaza_api/v1/color")
 public class ColorController {
 
     @Autowired

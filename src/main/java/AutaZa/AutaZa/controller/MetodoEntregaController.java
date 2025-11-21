@@ -19,7 +19,7 @@ import AutaZa.AutaZa.model.MetodoEntrega;
 import AutaZa.AutaZa.service.MetodoEntregaService;
 
 @RestController
-@RequestMapping("/api/metodoEntrega")
+@RequestMapping("/autaza_api/v1/metodoEntrega")
 public class MetodoEntregaController {
 
     @Autowired

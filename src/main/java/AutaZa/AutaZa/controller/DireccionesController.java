@@ -19,7 +19,7 @@ import AutaZa.AutaZa.model.Direcciones;
 import AutaZa.AutaZa.service.DireccionesService;
 
 @RestController
-@RequestMapping("/api/direcciones")
+@RequestMapping("/autaza_api/v1/direcciones")
 public class DireccionesController {
 
     @Autowired

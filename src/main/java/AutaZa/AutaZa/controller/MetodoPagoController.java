@@ -18,7 +18,7 @@ import AutaZa.AutaZa.model.MetodoPago;
 import AutaZa.AutaZa.service.MetodoPagoService;
 
 @RestController
-@RequestMapping("/api/metodoPago")
+@RequestMapping("/autaza_api/v1/metodoPago")
 public class MetodoPagoController {
 
     @Autowired

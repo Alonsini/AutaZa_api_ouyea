@@ -19,7 +19,7 @@ import AutaZa.AutaZa.model.Estado;
 import AutaZa.AutaZa.service.EstadoService;
 
 @RestController
-@RequestMapping("/api/estado")
+@RequestMapping("/autaza_api/v1/estado")
 public class EstadoController {
 
     @Autowired

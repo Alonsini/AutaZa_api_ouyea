@@ -18,46 +18,46 @@ import AutaZa.AutaZa.model.Producto;
 import AutaZa.AutaZa.service.ProductoService;
 
 @RestController
-@RequestMapping("/api/color")
+@RequestMapping("/autaza_api/v1/producto")
 public class ProductoController {
 
     @Autowired
-    private ProductoService colorService;
+    private ProductoService productoService;
 
     @GetMapping
     public ResponseEntity<List<Producto>> getAllProducto() {
-        List<Producto> color = colorService.findAll();
+        List<Producto> producto = productoService.findAll();
 
-        if (color.isEmpty()) {
+        if (producto.isEmpty()) {
             return ResponseEntity.noContent().build();
         }
 
-        return ResponseEntity.ok(color);
+        return ResponseEntity.ok(producto);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Producto> getProductoById(@PathVariable Integer idProducto) {
-        Producto color = colorService.findById(idProducto);
+        Producto producto = productoService.findById(idProducto);
 
-        if (color == null) {
+        if (producto == null) {
             return ResponseEntity.notFound().build();
         }
 
-        return ResponseEntity.ok(color);
+        return ResponseEntity.ok(producto);
     }
 
     @PostMapping
-    public ResponseEntity<Producto> createProducto(@RequestBody Producto color) {
-        color.setIdProducto(null);
-        Producto newProducto = colorService.save(color);
+    public ResponseEntity<Producto> createProducto(@RequestBody Producto producto) {
+        producto.setIdProducto(null);
+        Producto newProducto = productoService.save(producto);
         return ResponseEntity.status(HttpStatus.CREATED).body(newProducto);
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<Producto> updateProducto(@PathVariable Integer idProducto,
-            @RequestBody Producto color) {
-        color.setIdProducto(idProducto);
-        Producto updated = colorService.save(color);
+            @RequestBody Producto producto) {
+        producto.setIdProducto(idProducto);
+        Producto updated = productoService.save(producto);
 
         if (updated == null) {
             return ResponseEntity.notFound().build();
@@ -68,7 +68,7 @@ public class ProductoController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteProducto(@PathVariable Integer idProducto) {
-        colorService.deleteById(idProducto);
+        productoService.deleteById(idProducto);
         return ResponseEntity.noContent().build();
     }
 }
