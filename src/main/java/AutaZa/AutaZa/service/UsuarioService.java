@@ -67,8 +67,8 @@ public class UsuarioService {
 
         Usuario existing = list.get(0);
 
-        if (usuario.getNombre() != null) {
-            existing.setNombre(usuario.getNombre());
+        if (usuario.getNombreUsuario() != null) {
+            existing.setNombreUsuario(usuario.getNombreUsuario());
         }
 
         if (usuario.getCorreo() != null) {

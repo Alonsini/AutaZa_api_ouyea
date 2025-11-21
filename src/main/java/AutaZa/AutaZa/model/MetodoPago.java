@@ -20,7 +20,7 @@ public class MetodoPago {
     private Integer idMetodoPago;
 
     @Column(name = "nombreMetodoPago", length = 50, nullable = false)
-    private String nombre;
+    private String nombreMetodoPago;
 
     @Column(name = "descripcion", length = 200)
     private String descripcion;

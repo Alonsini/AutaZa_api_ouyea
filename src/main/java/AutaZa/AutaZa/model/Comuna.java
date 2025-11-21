@@ -22,7 +22,7 @@ public class Comuna {
     private Integer idComuna;
 
     @Column(name = "nombreComuna", length = 30, nullable = false)
-    private String nombre;
+    private String nombreComuna;
 
     @ManyToOne
     @JoinColumn(name = "idRegion")

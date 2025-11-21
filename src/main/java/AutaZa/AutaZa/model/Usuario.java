@@ -25,7 +25,7 @@ public class Usuario {
     private Integer idUsuario;
 
     @Column(name = "nombreUsuario", length = 50, nullable = false)
-    private String nombre;
+    private String nombreUsuario;
 
     @Column(name =  "correoUsuario", length = 50, nullable = false)
     private String correo;

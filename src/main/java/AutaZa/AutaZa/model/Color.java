@@ -20,7 +20,7 @@ public class Color {
     private Integer idColor;
 
     @Column(name = "nombreColor", length = 50, nullable = false)
-    private String nombre;
+    private String nombreColor;
 
     @Column(name = "codigoHexadecimal", length = 10, nullable = true)
     private String codigoHex;

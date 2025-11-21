@@ -33,8 +33,8 @@ public class ComunaService {
 
         if(existing != null){
 
-            if(comuna.getNombre() != null)
-                existing.setNombre(comuna.getNombre());
+            if(comuna.getNombreComuna() != null)
+                existing.setNombreComuna(comuna.getNombreComuna());
 
             if(comuna.getRegion() != null)
                 existing.setRegion(comuna.getRegion());

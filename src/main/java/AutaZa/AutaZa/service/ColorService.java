@@ -33,8 +33,8 @@ public class ColorService {
 
         if (existing != null) {
 
-            if (color.getNombre() != null)
-                existing.setNombre(color.getNombre());
+            if (color.getNombreColor() != null)
+                existing.setNombreColor(color.getNombreColor());
 
             if (color.getCodigoHex() != null)
                 existing.setCodigoHex(color.getCodigoHex());

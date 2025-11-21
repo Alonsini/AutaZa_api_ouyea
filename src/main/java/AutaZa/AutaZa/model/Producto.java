@@ -22,7 +22,7 @@ public class Producto {
 
     @ManyToOne
     @JoinColumn(name = "idMarca")
-    private Marca marca;
+    private Marca idMarca;
 
     @ManyToOne
     @JoinColumn(name = "idCombustible")

@@ -33,8 +33,8 @@ public class MetodoEntregaService {
 
         if(existing != null){
 
-            if(metodoEntrega.getNombre() != null)
-                existing.setNombre(metodoEntrega.getNombre());
+            if(metodoEntrega.getNombreMetodoEntrega() != null)
+                existing.setNombreMetodoEntrega(metodoEntrega.getNombreMetodoEntrega());
 
             if(metodoEntrega.getDescripcion() != null)
                 existing.setDescripcion(metodoEntrega.getDescripcion());

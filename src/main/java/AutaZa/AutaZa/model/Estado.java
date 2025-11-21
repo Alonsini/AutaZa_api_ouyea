@@ -20,6 +20,6 @@ public class Estado {
     private Integer idEstado;
 
     @Column(name = "nombreEstado", length = 50, nullable = false)
-    private String nombre;
+    private String nombreEstado;
 
 }

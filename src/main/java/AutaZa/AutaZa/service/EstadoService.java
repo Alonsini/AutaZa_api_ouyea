@@ -33,8 +33,8 @@ public class EstadoService {
 
         if(existing != null){
 
-            if(estado.getNombre() != null)
-                existing.setNombre(estado.getNombre());
+            if(estado.getNombreEstado() != null)
+                existing.setNombreEstado(estado.getNombreEstado());
 
             return estadoRepository.save(existing);
         }
