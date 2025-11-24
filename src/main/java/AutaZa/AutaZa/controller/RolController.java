@@ -18,7 +18,7 @@ import AutaZa.AutaZa.model.Rol;
 import AutaZa.AutaZa.service.RolService;
 
 @RestController
-@RequestMapping("/autaza_api/v1/rol")
+@RequestMapping("/api/v1/rol")
 public class RolController {
 
     @Autowired

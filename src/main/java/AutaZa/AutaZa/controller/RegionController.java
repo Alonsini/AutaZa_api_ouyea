@@ -18,7 +18,7 @@ import AutaZa.AutaZa.model.Region;
 import AutaZa.AutaZa.service.RegionService;
 
 @RestController
-@RequestMapping("/autaza_api/v1/region")
+@RequestMapping("/api/v1/region")
 public class RegionController {
 
     @Autowired

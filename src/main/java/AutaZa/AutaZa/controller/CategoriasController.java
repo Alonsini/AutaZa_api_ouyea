@@ -18,7 +18,7 @@ import AutaZa.AutaZa.model.Categorias;
 import AutaZa.AutaZa.service.CategoriasService;
 
 @RestController
-@RequestMapping("/autaza_api/v1/categorias")
+@RequestMapping("/api/v1/categorias")
 public class CategoriasController {
 
     @Autowired

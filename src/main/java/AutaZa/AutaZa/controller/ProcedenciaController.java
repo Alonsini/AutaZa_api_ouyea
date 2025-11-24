@@ -18,7 +18,7 @@ import AutaZa.AutaZa.model.Procedencia;
 import AutaZa.AutaZa.service.ProcedenciaService;
 
 @RestController
-@RequestMapping("/autaza_api/v1/procedencia")
+@RequestMapping("/api/v1/procedencia")
 public class ProcedenciaController {
 
     @Autowired

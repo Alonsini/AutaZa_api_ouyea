@@ -18,7 +18,7 @@ import AutaZa.AutaZa.model.Venta;
 import AutaZa.AutaZa.service.VentaService;
 
 @RestController
-@RequestMapping("/autaza_api/v1/venta")
+@RequestMapping("/api/v1/venta")
 public class VentaController {
 
     @Autowired

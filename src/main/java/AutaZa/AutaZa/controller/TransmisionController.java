@@ -18,7 +18,7 @@ import AutaZa.AutaZa.model.Transmision;
 import AutaZa.AutaZa.service.TransmisionService;
 
 @RestController
-@RequestMapping("/autaza_api/v1/transmision")
+@RequestMapping("/api/v1/transmision")
 public class TransmisionController {
 
     @Autowired

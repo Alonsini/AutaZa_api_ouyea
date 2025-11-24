@@ -19,7 +19,7 @@ import AutaZa.AutaZa.model.Usuario;
 import AutaZa.AutaZa.service.UsuarioService;
 
 @RestController
-@RequestMapping("/autaza_api/v1/usuario")
+@RequestMapping("/api/v1/usuario")
 public class UsuarioController {
 
     @Autowired

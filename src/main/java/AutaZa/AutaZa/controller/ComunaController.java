@@ -19,7 +19,7 @@ import AutaZa.AutaZa.model.Comuna;
 import AutaZa.AutaZa.service.ComunaService;
 
 @RestController
-@RequestMapping("/autaza_api/v1/comuna")
+@RequestMapping("/api/v1/comuna")
 public class ComunaController {
 
     @Autowired

@@ -19,7 +19,7 @@ import AutaZa.AutaZa.model.Combustible;
 import AutaZa.AutaZa.service.CombustibleService;
 
 @RestController
-@RequestMapping("/autaza_api/v1/combustible")
+@RequestMapping("/api/v1/combustible")
 public class CombustibleController {
 
     @Autowired

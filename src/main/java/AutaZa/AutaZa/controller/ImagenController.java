@@ -19,7 +19,7 @@ import AutaZa.AutaZa.model.Imagen;
 import AutaZa.AutaZa.service.ImagenService;
 
 @RestController
-@RequestMapping("/autaza_api/v1/imagen")
+@RequestMapping("/api/v1/imagen")
 public class ImagenController {
 
     @Autowired
