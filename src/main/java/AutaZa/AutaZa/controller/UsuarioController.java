@@ -36,7 +36,7 @@ public class UsuarioController {
         return ResponseEntity.ok(usuario);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{idUsuario}")
     public ResponseEntity<Usuario> getUsuarioById(@PathVariable Integer idUsuario) {
         Usuario usuario = usuarioService.findById(idUsuario);
 
@@ -54,7 +54,7 @@ public class UsuarioController {
         return ResponseEntity.status(HttpStatus.CREATED).body(newUsuario);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{idUsuario}")
     public ResponseEntity<Usuario> updateUsuario(@PathVariable Integer idUsuario,
             @RequestBody Usuario usuario) {
         usuario.setIdUsuario(idUsuario);
@@ -67,7 +67,7 @@ public class UsuarioController {
         return ResponseEntity.ok(updated);
     }
 
-    @PatchMapping("/{id}")
+    @PatchMapping("/{idUsuario}")
     public ResponseEntity<Usuario> partialUpdateUsuario(@PathVariable Integer idUsuario,
             @RequestBody Usuario usuario) {
         usuario.setIdUsuario(idUsuario);
@@ -80,7 +80,7 @@ public class UsuarioController {
         return ResponseEntity.ok(updated);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{idUsuario}")
     public ResponseEntity<Void> deleteUsuario(@PathVariable Integer idUsuario) {
         usuarioService.deleteById(idUsuario);
         return ResponseEntity.noContent().build();

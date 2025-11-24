@@ -36,7 +36,7 @@ public class DireccionesController {
         return ResponseEntity.ok(direcciones);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{idDirecciones}")
     public ResponseEntity<Direcciones> getDireccionesById(@PathVariable Integer idDirecciones) {
         Direcciones direcciones = direccionesService.findById(idDirecciones);
 
@@ -54,7 +54,7 @@ public class DireccionesController {
         return ResponseEntity.status(HttpStatus.CREATED).body(newDirecciones);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{idDirecciones}")
     public ResponseEntity<Direcciones> updateDirecciones(@PathVariable Integer idDirecciones,
             @RequestBody Direcciones direcciones) {
         direcciones.setIdDirecciones(idDirecciones);
@@ -67,7 +67,7 @@ public class DireccionesController {
         return ResponseEntity.ok(updated);
     }
 
-    @PatchMapping("/{id}")
+    @PatchMapping("/{idDirecciones}")
     public ResponseEntity<Direcciones> partialUpdateDirecciones(@PathVariable Integer idDirecciones,
             @RequestBody Direcciones direcciones) {
         direcciones.setIdDirecciones(idDirecciones);
@@ -80,7 +80,7 @@ public class DireccionesController {
         return ResponseEntity.ok(updated);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{idDirecciones}")
     public ResponseEntity<Void> deleteDirecciones(@PathVariable Integer idDirecciones) {
         direccionesService.deleteById(idDirecciones);
         return ResponseEntity.noContent().build();

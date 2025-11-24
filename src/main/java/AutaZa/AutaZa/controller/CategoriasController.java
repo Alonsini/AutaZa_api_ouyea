@@ -35,7 +35,7 @@ public class CategoriasController {
         return ResponseEntity.ok(categorias);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{idCategorias}")
     public ResponseEntity<Categorias> getCategoriasById(@PathVariable Integer idCategorias) {
         Categorias categoria = categoriasService.findById(idCategorias);
 
@@ -53,7 +53,7 @@ public class CategoriasController {
         return ResponseEntity.status(HttpStatus.CREATED).body(newCategoria);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{idCategorias}")
     public ResponseEntity<Categorias> updateCategorias(@PathVariable Integer idCategorias, @RequestBody Categorias categorias) {
         categorias.setIdCategorias(idCategorias);
         Categorias updated = categoriasService.save(categorias);
@@ -65,7 +65,7 @@ public class CategoriasController {
         return ResponseEntity.ok(updated);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{idCategorias}")
     public ResponseEntity<Void> deleteCategorias(@PathVariable Integer idCategorias) {
         categoriasService.deleteById(idCategorias);
         return ResponseEntity.noContent().build();

@@ -35,7 +35,7 @@ public class RegionController {
         return ResponseEntity.ok(region);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{idRegion}")
     public ResponseEntity<Region> getRegionById(@PathVariable Integer idRegion) {
         Region region = regionService.findById(idRegion);
 
@@ -53,7 +53,7 @@ public class RegionController {
         return ResponseEntity.status(HttpStatus.CREATED).body(newRegion);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{idRegion}")
     public ResponseEntity<Region> updateRegion(@PathVariable Integer idRegion,
             @RequestBody Region region) {
         region.setIdRegion(idRegion);
@@ -66,7 +66,7 @@ public class RegionController {
         return ResponseEntity.ok(updated);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{idRegion}")
     public ResponseEntity<Void> deleteRegion(@PathVariable Integer idRegion) {
         regionService.deleteById(idRegion);
         return ResponseEntity.noContent().build();

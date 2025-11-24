@@ -36,7 +36,7 @@ public class ImagenController {
         return ResponseEntity.ok(imagen);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{idImagen}")
     public ResponseEntity<Imagen> getImagenById(@PathVariable Integer idImagen) {
         Imagen imagen = imagenService.findById(idImagen);
 
@@ -54,7 +54,7 @@ public class ImagenController {
         return ResponseEntity.status(HttpStatus.CREATED).body(newImagen);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{idImagen}")
     public ResponseEntity<Imagen> updateImagen(@PathVariable Integer idImagen,
             @RequestBody Imagen imagen) {
         imagen.setIdImagen(idImagen);
@@ -67,7 +67,7 @@ public class ImagenController {
         return ResponseEntity.ok(updated);
     }
 
-    @PatchMapping("/{id}")
+    @PatchMapping("/{idImagen}")
     public ResponseEntity<Imagen> partialUpdateImagen(@PathVariable Integer idImagen,
             @RequestBody Imagen imagen) {
         imagen.setIdImagen(idImagen);
@@ -80,7 +80,7 @@ public class ImagenController {
         return ResponseEntity.ok(updated);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{idImagen}")
     public ResponseEntity<Void> deleteImagen(@PathVariable Integer idImagen) {
         imagenService.deleteById(idImagen);
         return ResponseEntity.noContent().build();

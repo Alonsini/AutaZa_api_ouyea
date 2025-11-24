@@ -35,7 +35,7 @@ public class ProcedenciaController {
         return ResponseEntity.ok(procedencia);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{idProcedencia}")
     public ResponseEntity<Procedencia> getProcedenciaById(@PathVariable Integer idProcedencia) {
         Procedencia procedencia = procedenciaService.findById(idProcedencia);
 
@@ -53,7 +53,7 @@ public class ProcedenciaController {
         return ResponseEntity.status(HttpStatus.CREATED).body(newProcedencia);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{idProcedencia}")
     public ResponseEntity<Procedencia> updateProcedencia(@PathVariable Integer idProcedencia,
             @RequestBody Procedencia procedencia) {
         procedencia.setIdProcedencia(idProcedencia);
@@ -66,7 +66,7 @@ public class ProcedenciaController {
         return ResponseEntity.ok(updated);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{idProcedencia}")
     public ResponseEntity<Void> deleteProcedencia(@PathVariable Integer idProcedencia) {
         procedenciaService.deleteById(idProcedencia);
         return ResponseEntity.noContent().build();

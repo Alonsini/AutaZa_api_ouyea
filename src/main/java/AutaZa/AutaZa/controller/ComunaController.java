@@ -36,7 +36,7 @@ public class ComunaController {
         return ResponseEntity.ok(comuna);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{idComuna}")
     public ResponseEntity<Comuna> getComunaById(@PathVariable Integer idComuna) {
         Comuna comuna = comunaService.findById(idComuna);
 
@@ -54,7 +54,7 @@ public class ComunaController {
         return ResponseEntity.status(HttpStatus.CREATED).body(newComuna);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{idComuna}")
     public ResponseEntity<Comuna> updateComuna(@PathVariable Integer idComuna,
             @RequestBody Comuna comuna) {
         comuna.setIdComuna(idComuna);
@@ -67,7 +67,7 @@ public class ComunaController {
         return ResponseEntity.ok(updated);
     }
 
-    @PatchMapping("/{id}")
+    @PatchMapping("/{idComuna}")
     public ResponseEntity<Comuna> partialUpdateComuna(@PathVariable Integer idComuna,
             @RequestBody Comuna comuna) {
         comuna.setIdComuna(idComuna);
@@ -80,7 +80,7 @@ public class ComunaController {
         return ResponseEntity.ok(updated);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{idComuna}")
     public ResponseEntity<Void> deleteComuna(@PathVariable Integer idComuna) {
         comunaService.deleteById(idComuna);
         return ResponseEntity.noContent().build();

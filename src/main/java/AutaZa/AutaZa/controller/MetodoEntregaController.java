@@ -36,7 +36,7 @@ public class MetodoEntregaController {
         return ResponseEntity.ok(metodoEntrega);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{idMetodoEntrega}")
     public ResponseEntity<MetodoEntrega> getMetodoEntregaById(@PathVariable Integer idMetodoEntrega) {
         MetodoEntrega metodoEntrega = metodoEntregaService.findById(idMetodoEntrega);
 
@@ -54,7 +54,7 @@ public class MetodoEntregaController {
         return ResponseEntity.status(HttpStatus.CREATED).body(newMetodoEntrega);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{idMetodoEntrega}")
     public ResponseEntity<MetodoEntrega> updateMetodoEntrega(@PathVariable Integer idMetodoEntrega,
             @RequestBody MetodoEntrega metodoEntrega) {
         metodoEntrega.setIdMetodoEntrega(idMetodoEntrega);
@@ -67,7 +67,7 @@ public class MetodoEntregaController {
         return ResponseEntity.ok(updated);
     }
 
-    @PatchMapping("/{id}")
+    @PatchMapping("/{idMetodoEntrega}")
     public ResponseEntity<MetodoEntrega> partialUpdateMetodoEntrega(@PathVariable Integer idMetodoEntrega,
             @RequestBody MetodoEntrega metodoEntrega) {
         metodoEntrega.setIdMetodoEntrega(idMetodoEntrega);
@@ -80,7 +80,7 @@ public class MetodoEntregaController {
         return ResponseEntity.ok(updated);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{idMetodoEntrega}")
     public ResponseEntity<Void> deleteMetodoEntrega(@PathVariable Integer idMetodoEntrega) {
         metodoEntregaService.deleteById(idMetodoEntrega);
         return ResponseEntity.noContent().build();

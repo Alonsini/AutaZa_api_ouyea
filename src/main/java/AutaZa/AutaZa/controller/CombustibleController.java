@@ -36,7 +36,7 @@ public class CombustibleController {
         return ResponseEntity.ok(combustible);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{idCombustible}")
     public ResponseEntity<Combustible> getCombustibleById(@PathVariable Integer idCombustible) {
         Combustible combustible = combustibleService.findById(idCombustible);
 
@@ -54,7 +54,7 @@ public class CombustibleController {
         return ResponseEntity.status(HttpStatus.CREATED).body(newCombustible);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{idCombustible}")
     public ResponseEntity<Combustible> updateCombustible(@PathVariable Integer idCombustible,
             @RequestBody Combustible combustible) {
         combustible.setIdCombustible(idCombustible);
@@ -67,7 +67,7 @@ public class CombustibleController {
         return ResponseEntity.ok(updated);
     }
 
-    @PatchMapping("/{id}")
+    @PatchMapping("/{idCombustible}")
     public ResponseEntity<Combustible> partialUpdateCombustible(@PathVariable Integer idCombustible,
             @RequestBody Combustible combustible) {
         combustible.setIdCombustible(idCombustible);
@@ -80,7 +80,7 @@ public class CombustibleController {
         return ResponseEntity.ok(updated);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{idCombustible}")
     public ResponseEntity<Void> deleteCombustible(@PathVariable Integer idCombustible) {
         combustibleService.deleteById(idCombustible);
         return ResponseEntity.noContent().build();

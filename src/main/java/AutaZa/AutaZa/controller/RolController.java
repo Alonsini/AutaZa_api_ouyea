@@ -35,7 +35,7 @@ public class RolController {
         return ResponseEntity.ok(rol);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{idRol}")
     public ResponseEntity<Rol> getRolById(@PathVariable Integer idRol) {
         Rol rol = rolService.findById(idRol);
 
@@ -53,7 +53,7 @@ public class RolController {
         return ResponseEntity.status(HttpStatus.CREATED).body(newRol);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{idRol}")
     public ResponseEntity<Rol> updateRol(@PathVariable Integer idRol,
             @RequestBody Rol rol) {
         rol.setIdRol(idRol);
@@ -66,7 +66,7 @@ public class RolController {
         return ResponseEntity.ok(updated);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{idRol}")
     public ResponseEntity<Void> deleteRol(@PathVariable Integer idRol) {
         rolService.deleteById(idRol);
         return ResponseEntity.noContent().build();

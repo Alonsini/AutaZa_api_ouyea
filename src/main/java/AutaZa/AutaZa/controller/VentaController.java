@@ -35,7 +35,7 @@ public class VentaController {
         return ResponseEntity.ok(venta);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{idVenta}")
     public ResponseEntity<Venta> getVentaById(@PathVariable Integer idVenta) {
         Venta venta = ventaService.findById(idVenta);
 
@@ -53,7 +53,7 @@ public class VentaController {
         return ResponseEntity.status(HttpStatus.CREATED).body(newVenta);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{idVenta}")
     public ResponseEntity<Venta> updateVenta(@PathVariable Integer idVenta,
             @RequestBody Venta venta) {
         venta.setIdVenta(idVenta);
@@ -66,7 +66,7 @@ public class VentaController {
         return ResponseEntity.ok(updated);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{idVenta}")
     public ResponseEntity<Void> deleteVenta(@PathVariable Integer idVenta) {
         ventaService.deleteById(idVenta);
         return ResponseEntity.noContent().build();

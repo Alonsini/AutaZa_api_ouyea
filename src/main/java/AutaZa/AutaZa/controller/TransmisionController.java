@@ -35,7 +35,7 @@ public class TransmisionController {
         return ResponseEntity.ok(transmision);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{idTransmision}")
     public ResponseEntity<Transmision> getTransmisionById(@PathVariable Integer idTransmision) {
         Transmision transmision = transmisionService.findById(idTransmision);
 
@@ -53,7 +53,7 @@ public class TransmisionController {
         return ResponseEntity.status(HttpStatus.CREATED).body(newTransmision);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{idTransmision}")
     public ResponseEntity<Transmision> updateTransmision(@PathVariable Integer idTransmision,
             @RequestBody Transmision transmision) {
         transmision.setIdTransmision(idTransmision);
@@ -66,7 +66,7 @@ public class TransmisionController {
         return ResponseEntity.ok(updated);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{idTransmision}")
     public ResponseEntity<Void> deleteTransmision(@PathVariable Integer idTransmision) {
         transmisionService.deleteById(idTransmision);
         return ResponseEntity.noContent().build();

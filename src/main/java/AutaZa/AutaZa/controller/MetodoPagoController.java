@@ -35,7 +35,7 @@ public class MetodoPagoController {
         return ResponseEntity.ok(metodoPago);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{idMetodoPago}")
     public ResponseEntity<MetodoPago> getMetodoPagoById(@PathVariable Integer idMetodoPago) {
         MetodoPago metodoPago = metodoPagoService.findById(idMetodoPago);
 
@@ -53,7 +53,7 @@ public class MetodoPagoController {
         return ResponseEntity.status(HttpStatus.CREATED).body(newMetodoPago);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{idMetodoPago}")
     public ResponseEntity<MetodoPago> updateMetodoPago(@PathVariable Integer idMetodoPago,
             @RequestBody MetodoPago metodoPago) {
         metodoPago.setIdMetodoPago(idMetodoPago);
@@ -66,7 +66,7 @@ public class MetodoPagoController {
         return ResponseEntity.ok(updated);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{idMetodoPago}")
     public ResponseEntity<Void> deleteMetodoPago(@PathVariable Integer idMetodoPago) {
         metodoPagoService.deleteById(idMetodoPago);
         return ResponseEntity.noContent().build();

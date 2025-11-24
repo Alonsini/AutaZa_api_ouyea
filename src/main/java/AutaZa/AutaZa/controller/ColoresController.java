@@ -35,7 +35,7 @@ public class ColoresController {
         return ResponseEntity.ok(colores);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{idColores}")
     public ResponseEntity<Colores> getColoresById(@PathVariable Integer idColores) {
         Colores colores = coloresService.findById(idColores);
 
@@ -53,7 +53,7 @@ public class ColoresController {
         return ResponseEntity.status(HttpStatus.CREATED).body(newColores);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{idColores}")
     public ResponseEntity<Colores> updateColores(@PathVariable Integer idColores, @RequestBody Colores colores) {
         colores.setIdColores(idColores);
         Colores updated = coloresService.save(colores);
@@ -65,7 +65,7 @@ public class ColoresController {
         return ResponseEntity.ok(updated);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{idColores}")
     public ResponseEntity<Void> deleteColores(@PathVariable Integer idColores) {
         coloresService.deleteById(idColores);
         return ResponseEntity.noContent().build();

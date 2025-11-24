@@ -36,7 +36,7 @@ public class EstadoController {
         return ResponseEntity.ok(estado);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{idEstado}")
     public ResponseEntity<Estado> getEstadoById(@PathVariable Integer idEstado) {
         Estado estado = estadoService.findById(idEstado);
 
@@ -54,7 +54,7 @@ public class EstadoController {
         return ResponseEntity.status(HttpStatus.CREATED).body(newEstado);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{idEstado}")
     public ResponseEntity<Estado> updateEstado(@PathVariable Integer idEstado,
             @RequestBody Estado estado) {
         estado.setIdEstado(idEstado);
@@ -67,7 +67,7 @@ public class EstadoController {
         return ResponseEntity.ok(updated);
     }
 
-    @PatchMapping("/{id}")
+    @PatchMapping("/{idEstado}")
     public ResponseEntity<Estado> partialUpdateEstado(@PathVariable Integer idEstado,
             @RequestBody Estado estado) {
         estado.setIdEstado(idEstado);
@@ -80,7 +80,7 @@ public class EstadoController {
         return ResponseEntity.ok(updated);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{idEstado}")
     public ResponseEntity<Void> deleteEstado(@PathVariable Integer idEstado) {
         estadoService.deleteById(idEstado);
         return ResponseEntity.noContent().build();

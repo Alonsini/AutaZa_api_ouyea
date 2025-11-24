@@ -36,7 +36,7 @@ public class ColorController {
         return ResponseEntity.ok(color);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{idColor}")
     public ResponseEntity<Color> getColorById(@PathVariable Integer idColor) {
         Color color = colorService.findById(idColor);
 
@@ -54,7 +54,7 @@ public class ColorController {
         return ResponseEntity.status(HttpStatus.CREATED).body(newColor);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{idColor}")
     public ResponseEntity<Color> updateColor(@PathVariable Integer idColor,
             @RequestBody Color color) {
         color.setIdColor(idColor);
@@ -67,7 +67,7 @@ public class ColorController {
         return ResponseEntity.ok(updated);
     }
 
-    @PatchMapping("/{id}")
+    @PatchMapping("/{idColor}")
     public ResponseEntity<Color> partialUpdateColor(@PathVariable Integer idColor,
             @RequestBody Color color) {
         color.setIdColor(idColor);
@@ -80,7 +80,7 @@ public class ColorController {
         return ResponseEntity.ok(updated);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{idColor}")
     public ResponseEntity<Void> deleteColor(@PathVariable Integer idColor) {
         colorService.deleteById(idColor);
         return ResponseEntity.noContent().build();
